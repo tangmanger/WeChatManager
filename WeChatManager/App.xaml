@@ -1,0 +1,15 @@
+﻿<Application x:Class="WeChatManager.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WeChatManager"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Themes/DefaultColor.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/Style/TextBlock.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/Style/Button.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
