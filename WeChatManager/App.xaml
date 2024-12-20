@@ -6,9 +6,11 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Files/Langs/Zh_CN.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="/Themes/DefaultColor.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="/Style/TextBlock.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="/Style/Button.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/Style/Path.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

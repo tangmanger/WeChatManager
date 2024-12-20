@@ -11,4 +11,10 @@
     <Style x:Key="DefaultTextBlockStyle" TargetType="TextBlock">
         <Setter Property="Foreground" Value="{DynamicResource baseForeground}"></Setter>
     </Style>
+    <Style x:Key="TitleTextBlockStyle" BasedOn="{StaticResource DefaultTextBlockStyle}" TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="FontSize" Value="18"></Setter>
+        <Setter Property="FontWeight" Value="Bold"></Setter>
+    </Style>
 </ResourceDictionary>

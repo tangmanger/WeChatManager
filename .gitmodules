@@ -1,0 +1,6 @@
+[submodule "Dicgo.Common"]
+	path = Dicgo.Common
+	url = git@github.com:tangmanger/Dicgo.Common.git
+[submodule "Dicgo.Domain"]
+	path = Dicgo.Domain
+	url = git@github.com:tangmanger/Dicgo.Domain.git

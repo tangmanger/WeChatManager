@@ -26,12 +26,16 @@
             <ColumnDefinition Width="55"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="1" WindowChrome.IsHitTestVisibleInChrome="True"  Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,10,0">
+        <StackPanel Grid.Column="1" WindowChrome.IsHitTestVisibleInChrome="True"  Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0">
             <Button Style="{StaticResource IconButtonStyle}" FontSize="16" Margin="10,0,10,0"  Command="{x:Static SystemCommands.MinimizeWindowCommand}"  Foreground="{DynamicResource mainOperateButtonBrushes}" Content="&#xea6a;"></Button>
             <!--<Button Style="{StaticResource IconButtonStyle}" FontSize="16" Margin="10,0,10,0"  Command="{x:Static SystemCommands.MaximizeWindowCommand}"  x:Name="max" Foreground="{DynamicResource mainOperateButtonBrushes}" Content="&#xe65d;"></Button>
             <Button Style="{StaticResource IconButtonStyle}" FontSize="16" Margin="10,0,10,0"  Command="{x:Static SystemCommands.RestoreWindowCommand}" x:Name="normal" Foreground="{DynamicResource mainOperateButtonBrushes}" Content="&#xe692;"></Button>-->
             <Button Style="{StaticResource IconButtonStyle}" FontSize="16" Foreground="{DynamicResource mainOperateButtonBrushes}" Command="{x:Static SystemCommands.CloseWindowCommand}" Content="&#xe607;"></Button>
         </StackPanel>
+        <Viewbox  Width="20" Height="20">
+            <Path Data="{StaticResource logo}" Stroke="#1296db" Fill="#1296db"></Path>
+        </Viewbox>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Style="{StaticResource TitleTextBlockStyle}" d:Text="微信助手" Text="{DynamicResource Title}" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
         <Border Grid.Column="1" Grid.Row="1" CornerRadius="8,0,0,0" Background="{DynamicResource workBackground}"></Border>
     </Grid>
 </Window>
