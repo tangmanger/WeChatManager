@@ -4,4 +4,5 @@
     <SolidColorBrush x:Key="mainBackground" Color="#E6F3FD"></SolidColorBrush>
     <SolidColorBrush x:Key="workBackground" Color="#F3F9FE"></SolidColorBrush>
     <SolidColorBrush x:Key="mainOperateButtonBrushes" Color="#7078A0"></SolidColorBrush>
+    <SolidColorBrush x:Key="checkForeground" Color="#005FB8"></SolidColorBrush>
 </ResourceDictionary>

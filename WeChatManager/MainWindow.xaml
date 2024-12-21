@@ -3,9 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WeChatManager"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:local="clr-namespace:WeChatManager" 
+        xmlns:controls="clr-namespace:WeChatManager.Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Width="450" Height="664">
+        Title="MainWindow" Width="450" Height="664" WindowStartupLocation="CenterScreen" DataContext="{Binding Main,Source={StaticResource Locator}}">
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="30"
                  GlassFrameThickness="10"
@@ -17,13 +19,18 @@
                   />
 
     </WindowChrome.WindowChrome>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadCommand}" ></i:InvokeCommandAction>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <Grid Background="{DynamicResource mainBackground}">
         <Grid.RowDefinitions>
             <RowDefinition Height="46"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="55"></ColumnDefinition>
+            <ColumnDefinition Width="60"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="1" WindowChrome.IsHitTestVisibleInChrome="True"  Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0">
@@ -33,9 +40,15 @@
             <Button Style="{StaticResource IconButtonStyle}" FontSize="16" Foreground="{DynamicResource mainOperateButtonBrushes}" Command="{x:Static SystemCommands.CloseWindowCommand}" Content="&#xe607;"></Button>
         </StackPanel>
         <Viewbox  Width="20" Height="20">
-            <Path Data="{StaticResource logo}" Stroke="#1296db" Fill="#1296db"></Path>
+            <Path Data="{StaticResource logo}" Stroke="#005FB8" Fill="#005FB8"></Path>
         </Viewbox>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Style="{StaticResource TitleTextBlockStyle}" d:Text="微信助手" Text="{DynamicResource Title}" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
-        <Border Grid.Column="1" Grid.Row="1" CornerRadius="8,0,0,0" Background="{DynamicResource workBackground}"></Border>
+        <StackPanel Orientation="Vertical" Grid.Row="1">
+            <controls:IconRadioButton Style="{StaticResource NavigateButtonStyle}" Icon="&#xe8ff;" IsChecked="True" d:Content="首页" Content="{DynamicResource Home}"/>
+
+        </StackPanel>
+        <Border Grid.Column="1" Grid.Row="1" CornerRadius="8,0,0,0" Background="{DynamicResource workBackground}">
+            <ContentControl Content="{Binding WorkView}"></ContentControl>
+        </Border>
     </Grid>
 </Window>
